@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class JonathanKenny_IntegrationProject {
 	
 	/**
-	 * Jonathan Kenny
-	 * COP 2006 - Fall 2017
-	 * Prof. VanSelow
+	 * JONATHAN KENNY
+	 * COP 2006 - FALL 2017
+	 * PROF. VANSELOW
 	 */
 	
 	// HEADER:
@@ -14,15 +14,24 @@ public class JonathanKenny_IntegrationProject {
 		System.out.println("A portfolio of things learned in COP 2006");
 		System.out.println("...this is an ongoing and evolving program");
 		
-		Scanner scan = new Scanner(System.in);
-		int a = scan.nextInt();
-		int bbb = scan.nextInt();
-		int ccc = scan.nextInt();
 		
-		System.out.println(a);
-		System.out.println(bbb);
-		System.out.println(ccc);
-		scan.close();
+		//PSI_1.method();
+    //PSI_2.method();
+    //PSI_3.method();
+		
+		
+    //OLD CODE--FIX THIS!
+		/**
+     * Scanner scan = new Scanner(System.in);
+     * int aaa = scan.nextInt();
+     * int bbb = scan.nextInt();
+     * int ccc = scan.nextInt();
+     * 
+     * System.out.println(aaa);
+     * System.out.println(bbb);
+     * System.out.println(ccc);
+     * scan.close();
+     */
 		
   }
 
