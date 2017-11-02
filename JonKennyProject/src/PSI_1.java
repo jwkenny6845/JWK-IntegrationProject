@@ -85,6 +85,7 @@ public class PSI_1 {
 	int product = 2 * 8; 
 	int quotient = 45 / 3;
 	
+	System.out
 	
 	
 	/**
