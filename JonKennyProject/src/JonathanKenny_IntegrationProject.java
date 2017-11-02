@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
+/**
+ * JONATHAN KENNY
+ * COP 2006 - FALL 2017
+ * PROF. VANSELOW
+ */
+
 public class JonathanKenny_IntegrationProject {
-	
-	/**
-	 * JONATHAN KENNY
-	 * COP 2006 - FALL 2017
-	 * PROF. VANSELOW
-	 */
 	
 	// HEADER:
 	public static void main(String[] args) {
@@ -18,7 +18,7 @@ public class JonathanKenny_IntegrationProject {
 		//PSI_1.method();
     //PSI_2.method();
     //PSI_3.method();
-		
+				
 		
     //OLD CODE--FIX THIS!
 		/**
