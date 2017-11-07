@@ -28,27 +28,43 @@ public class JonathanKenny_IntegrationProject {
 
 
      Scanner scan = new Scanner(System.in);
-     String input = scan.nextLine();
-
+     int input = scan.nextInt();
      System.out.println("You picked Method: " + input);
+     
+     System.out.println("Enter Number");
+     int number = scan.nextInt();
+
+ 
+    if (input == 1) {
+      System.out.println(PSI_2.Factorial(number));
+    } else if (input == 2) {
+      PSI_2.Factorial(6);
+    } else if (input == 3) {
+      PSI_2.Factorial(7);
+    } else if (input == 4) {
+      PSI_2.Factorial(8);
+    } else {
+      System.out.println("You picked WRONG");
+    }
+         
+     
      scan.close();
     
-    
     /////////////////
-		//PSI_1.method();
-		/////////////////
-    //PSI_2.ifelse();
-    //PSI_2.whileloop();
-    //PSI_2.forloop();
-    //PSI_2.relationaloperators();
-    //PSI_2.conditionaloperators();
-    //PSI_2.class();
-    //PSI_2.array();
-		/////////////////
-    //PSI_3.method();
-	
+    // PSI_1.method();
+    /////////////////
+     // PSI_2.apple();
+     // PSI_2.ifelse();
+    // PSI_2.switch();
+    // PSI_2.whileloop();
+    // PSI_2.forloop();
+    // PSI_2.relationaloperators();
+    // PSI_2.conditionaloperators();
+    // PSI_2.class();
+    // PSI_2.array();
+    /////////////////
+    // PSI_3.method();
 		
-	
 		
   }
 

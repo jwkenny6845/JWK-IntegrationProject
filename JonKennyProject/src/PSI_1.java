@@ -87,7 +87,6 @@ public class PSI_1 {
 	int product = 2 * 8; 
 	int quotient = 45 / 3;
 	
-	System.out
 	
 	
 	/**
@@ -108,10 +107,10 @@ public class PSI_1 {
    * --------------------------------------------------------------------------
 	 */
 	
-	int exampleA = 10 / 2; /* Result is 5 */
-	int exampleB = 10 / 3; /* Result is 3 */
-	int exampleC = 10 / 4; /* Result is 2 */
-	int exampleD = 4 / 10; /* Result is 0 */	
+	//int exampleA = 10 / 2; /* Result is 5 */
+	//int exampleB = 10 / 3; /* Result is 3 */
+	//int exampleC = 10 / 4; /* Result is 2 */
+	//int exampleD = 4 / 10; /* Result is 0 */	
 	
 	
 	
