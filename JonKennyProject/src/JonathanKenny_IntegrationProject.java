@@ -8,7 +8,33 @@ import java.util.Scanner;
 
 public class JonathanKenny_IntegrationProject {
 
-  // HEADER:
+    
+    
+    public void tableOfContents() {
+     switch (method) {
+       case 1: method = 1;
+                   System.out.println(PSI_2.Factorial(userInput));
+                break;
+       case 2:  method = 2;
+                   System.out.println(PSI_2.Factorial(userInput));
+                break;
+       case 3:  method = 3;
+                   System.out.println(PSI_2.Factorial(userInput));
+                break;
+       case 4:  method = 4;
+                   System.out.println(PSI_2.Factorial(userInput));
+                break;
+       case 5:  method = 5;
+                   System.out.println(PSI_2.Factorial(userInput));
+                break;
+       default: method > 5;
+               System.out.println("OUT OF BOUNDS");
+                break;
+   }
+    
+     
+     
+  // HEADER: MAIN METHOD:
   public static void main(String[] args) {
     System.out.println(
             "Welcome to Jonathan Kenny's Integration Project:\n"
@@ -30,50 +56,25 @@ public class JonathanKenny_IntegrationProject {
             + "Enter a Method Number to call a Method:"
             );
 
+     //INPUT SCANNER OBJECT:
      Scanner scan = new Scanner(System.in);
-     int method = scan.nextInt();
      
+     
+     
+     //METHOD SELECTOR PROMPT:
+     int method = scan.nextInt();
      System.out.println("You picked Method: " + method);
      
-     System.out.println("Enter Number");
-     int number = scan.nextInt();
+     //METHOD INPUT PROMPT:
+     System.out.println("Enter Number:");
+     int userInput = scan.nextInt();
      
-    
-    switch (method) {
-        case 1: method = 1;
-                    System.out.println(PSI_2.Factorial(number));
-                 break;
-        case 2:  method = 2;
-                    System.out.println(PSI_2.Factorial(number));
-                 break;
-        case 3:  method = 3;
-                 break;
-        case 4:  method = 4;
-                 break;
-        case 5:  method = 5;
-                 break;
-        case 6:  method = 6;
-                 break;
-        case 7:  method = 7;
-                 break;
-        case 8:  method = 8;
-                 break;
-        case 9:  method = 9;
-                 break;
-        default: method = 10;
-                System.out.println("OUT OF BOUNDS");
-                 break;
+     //METHODS TOC SWITCH
+     
     }
-    System.out.println("Want to try another method?: Y/N" + method);
-    if (scan.nextLine() == "Y") {        
-        System.out.println("You picked Method: " + method);
-        
-        System.out.println("Enter Number");
-    }else () {
-        scan.close();
-  }
-	
-  }
+
+
+     
 }
 
 
