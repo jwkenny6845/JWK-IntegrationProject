@@ -8,32 +8,8 @@ import java.util.Scanner;
 
 public class JonathanKenny_IntegrationProject {
 
-    
-    
-    public void tableOfContents() {
-     switch (method) {
-       case 1: method = 1;
-                   System.out.println(PSI_2.Factorial(userInput));
-                break;
-       case 2:  method = 2;
-                   System.out.println(PSI_2.Factorial(userInput));
-                break;
-       case 3:  method = 3;
-                   System.out.println(PSI_2.Factorial(userInput));
-                break;
-       case 4:  method = 4;
-                   System.out.println(PSI_2.Factorial(userInput));
-                break;
-       case 5:  method = 5;
-                   System.out.println(PSI_2.Factorial(userInput));
-                break;
-       default: method > 5;
-               System.out.println("OUT OF BOUNDS");
-                break;
-   }
-    
-     
-     
+  static Scanner scanContinue = new Scanner(System.in);
+
   // HEADER: MAIN METHOD:
   public static void main(String[] args) {
     System.out.println(
@@ -55,31 +31,18 @@ public class JonathanKenny_IntegrationProject {
             + "\n"
             + "Enter a Method Number to call a Method:"
             );
+     
+    String cont = "y";
+    do {
+      TableOfContents.tableOfContents();
+      System.out.println("Enter y/n to continue");
+      cont = scanContinue.nextLine();
 
-     //INPUT SCANNER OBJECT:
-     Scanner scan = new Scanner(System.in);
-     
-     
-     
-     //METHOD SELECTOR PROMPT:
-     int method = scan.nextInt();
-     System.out.println("You picked Method: " + method);
-     
-     //METHOD INPUT PROMPT:
-     System.out.println("Enter Number:");
-     int userInput = scan.nextInt();
-     
-     //METHODS TOC SWITCH
-     
-    }
+    } while (cont.equalsIgnoreCase("y"));
+    scanContinue.close();
+  }
 
-
-     
 }
-
-
-
-
 
 ////////////////////////////////
 // PSI_1.method();
