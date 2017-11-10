@@ -1,41 +1,42 @@
 
 public class PSI_2 {
 
-    static int Factorial(int number) {
+    static int factorial(int number) {
 
-      //////////////
-      // BASE CASE:
-      if (number == 1) {
-        return 1;
-      }
-      ///////////////////
-      // RECURSIVE CASE:
-      else {
-        return number * Factorial(number - 1);
-      }
-      
+        //////////////
+        // BASE CASE:
+        if (number == 1) {
+            return 1;
+        }
+        ///////////////////
+        // RECURSIVE CASE:
+        else {
+            return number * factorial(number - 1);
+        }
+
     }
 
-  }
-
-  
 
 
+    public static int summation(int number) {
+        int sum = 0;
+        for (int i = 1; i <= number; i++) {
+            sum += i;
+        }
+        return sum;
+    }
 
-/**
- * An if else statement
- * 
- * A switch statement
- * 
- * while loop
- * 
- * for loop
- * 
- * relational operators
- * 
- * conditional operators
- * 
- * class (A class with fields that are all private and a public get and set for each field)
- * 
- * array (Code that manually finds smallest, gets sum, and identifies index where value was found)
- */
+
+
+    public static String inBetween10and20(int number) {
+
+        if (10 < number &&  20 > number) {
+            return "   YES, " + number + " is inbetween 10 and 20";
+        }
+        else {
+            return "   NO, " + number + " is not inbetween 10 and 20";
+        }
+
+    }
+}
+
