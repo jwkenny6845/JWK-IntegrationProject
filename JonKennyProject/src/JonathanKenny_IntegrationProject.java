@@ -40,7 +40,7 @@ public class JonathanKenny_IntegrationProject {
             System.out.println("\n\n\n---------------------------------\n"
                     + "Press 1 to continue or 2 to quit."
                     + "\n---------------------------------");
-            continueProgram = scan.nextInt();
+            continueProgram = ExceptionHandler.getGoodIntInput(scan);
         }
 
         System.out.println("\n\n\n~~~~~~~~~\n~~~~~~~~~\n"

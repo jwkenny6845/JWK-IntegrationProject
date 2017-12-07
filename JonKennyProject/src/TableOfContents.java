@@ -15,12 +15,12 @@ public class TableOfContents {
         System.out.println("\n\n---------------------------------------\n"
                 + "Enter a Method Number to call a Method:"
                 + "\n---------------------------------------");
-        int method = scan.nextInt();
+        int method = ExceptionHandler.getGoodIntInput(scan);
         System.out.println("\nYou picked Method (" + method + ")");
 
         //METHOD INPUT PROMPT:
         System.out.println("Enter Number:");
-        int userInput = scan.nextInt();
+        int userInput = ExceptionHandler.getGoodIntInput(scan);
 
         switch (method) {
         //////////////////////////////////////////////////////////////////////    
