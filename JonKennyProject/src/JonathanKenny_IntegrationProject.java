@@ -17,7 +17,6 @@ public class JonathanKenny_IntegrationProject {
                 "Welcome to Jonathan Kenny's Integration Project:\n"
               + "A portfolio of things learned in COP 2006\n"
               + "\n"
-              + "\n"
               + "    ? What would you like to perform ?\n"
               + "   ------------------------------------"
               + "\n"
@@ -33,14 +32,14 @@ public class JonathanKenny_IntegrationProject {
             //+ "  (10)\tFind the factorial of A NUMBER\n"
               );
 
-        int continueProgram = 1;
+        char continueProgram = 'y';
 
-        while (continueProgram == 1) {
+        while (continueProgram == 'y') {
             TableOfContents.tableOfContents(scan);
             System.out.println("\n\n\n---------------------------------\n"
-                    + "Press 1 to continue or 2 to quit."
+                    + "Press y to continue or n to quit."
                     + "\n---------------------------------");
-            continueProgram = ExceptionHandler.getGoodIntInput(scan);
+            continueProgram = ExceptionHandler.getGoodCharInput(scan);
         }
 
         System.out.println("\n\n\n~~~~~~~~~\n~~~~~~~~~\n"

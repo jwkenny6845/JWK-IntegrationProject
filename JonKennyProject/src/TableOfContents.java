@@ -12,7 +12,7 @@ public class TableOfContents {
     public static void tableOfContents(Scanner scan) {
 
         //METHOD SELECTOR PROMPT:
-        System.out.println("\n\n---------------------------------------\n"
+        System.out.println("---------------------------------------\n"
                 + "Enter a Method Number to call a Method:"
                 + "\n---------------------------------------");
         int method = ExceptionHandler.getGoodIntInput(scan);
@@ -36,8 +36,9 @@ public class TableOfContents {
             break;
         //////////////////////////////////////////////////////////////////////    
         case 3:  
-            System.out.println("\n\nIs " + userInput + " inbetween 10 and 20?"
-                    + "\n\n" + PSI_2.inBetween10and20(userInput));
+          double userDoubleInput = ExceptionHandler.getGoodDoubleInput(scan);
+            System.out.println("\n\nIs " + userDoubleInput + " in between 10 and 20?"
+                    + "\n\n" + PSI_2.inBetween10and20(userDoubleInput));
             break;
         //////////////////////////////////////////////////////////////////////            
         case 4:  

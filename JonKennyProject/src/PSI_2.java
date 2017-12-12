@@ -66,7 +66,7 @@ public class PSI_2 {
         return sum;
     }
 
-    public static String inBetween10and20(int number) {
+    public static String inBetween10and20(double number) {
 
         if (10 < number &&  20 > number) {
             return "   YES, " + number + " is inbetween 10 and 20";
