@@ -1,8 +1,12 @@
 
 public class Poly {
 
+  // --POLYMORPHISM DEMO CLASS-- //
+  /**
+   * Class that demonstrates polymorphism.
+   */
   public static void doPolyDemo() {
-    // program that demonstrates classes
+    // --program that demonstrates classes-- //
     Vehicle myHonda = new Vehicle();
     myHonda.setMake("Honda");
     myHonda.setColor("black");
@@ -16,7 +20,7 @@ public class Poly {
     myTesla.setColor("black");
     myTesla.seteMPG(100);
 
-    Vehicle myGarage[] = new Vehicle[3];
+    Vehicle[] myGarage = new Vehicle[3];
     myGarage[0] = myHonda;
     myGarage[1] = myMini;
     myGarage[2] = myTesla;
@@ -28,6 +32,10 @@ public class Poly {
   }
 }
 
+/**
+ * @author jonkenny
+ *
+ */
 class ElectricCar extends Vehicle {
   private int eMPG;
 
