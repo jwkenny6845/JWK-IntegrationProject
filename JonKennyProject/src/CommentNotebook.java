@@ -2,9 +2,11 @@
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
 
-public class PSI1 {
+public class CommentNotebook {
 
   // /**
+  // *
+  // * PSI 1 NOTES:
   // *
   // --------------------------------------------------------------------------
   // * (1) USE OF VARIABLES
@@ -179,6 +181,45 @@ public class PSI1 {
   // * VIEW-> Person.java file for Sets method examples
   // *
   // --------------------------------------------------------------------------
+  // */
+
+  // /**
+  // * PSI 2 NOTES:
+  // *
+  // * An if else statement
+  // * ---(Used in the "PSI_2.factorial" method)
+  // *
+  // *
+  // * A switch statement
+  // * ---(Used in the "TableOfContents.tableOfContents" method)
+  // *
+  // *
+  // * while loop
+  // * ---(Used in the "JonathanKenny_IntegrationProject.main" method)
+  // *
+  // *
+  // * for loop
+  // * ---(Used in the "PSI_2.summation" method)
+  // *
+  // *
+  // * relational operators
+  // * ---( "==" is used in the "JonathanKenny_IntegrationProject.main" method)
+  // * ---( "==" is used in the "PSI_2.factorial" method)
+  // * ---( "<=" is used in the "PSI_2.summation" method)
+  // * ---( "<" and ">" are used in the "PSI_2.inBetween10and20" method)
+  // *
+  // *
+  // * conditional operators
+  // * ---( "&&" used in the "PSI_2.inBetween10and20" method)
+  // *
+  // *
+  // * dictionary/map
+  // * ---(Used in the "PhoneBookMap" class)
+  // *
+  // *
+  // * array (Code that manually finds smallest, gets sum,
+  // * and identifies index where value was found)
+  // * ---(Example of an array in the "ArrayExample" class)
   // */
 
 }

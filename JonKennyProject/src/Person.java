@@ -4,8 +4,8 @@
 
 public class Person {
 
-  // USE OF VARIABLES:
-  // [4 FIELDS in the Person class]
+  // --USE OF VARIABLES-- //
+  // --[4 FIELDS in the Person class]-- //
   public String name;
   public int age;
   public int height;

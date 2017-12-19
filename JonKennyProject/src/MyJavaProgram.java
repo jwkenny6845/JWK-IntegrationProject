@@ -1,8 +1,5 @@
-
 /**
- * JONATHAN KENNY
- * COP 2006 - FALL 2017
- * PROF. VANSELOW
+ * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
 
 import java.util.Scanner;
@@ -11,7 +8,7 @@ public class MyJavaProgram {
 
   static Scanner scan;
 
-  // HEADER: MAIN METHOD:
+  // --PROGRAM MAIN METHOD-- //
   /**
    * Jonathan Kenny's - Integration Project - COP 2006 - Prof. Vanselow.
    * 
@@ -20,32 +17,47 @@ public class MyJavaProgram {
    */
   public static void main(String[] args) {
     scan = new Scanner(System.in);
-    System.out.println("Welcome to Jonathan Kenny's Integration Project:\n"
-        + "A portfolio of things learned in COP 2006\n" + "\n"
-        + "    ? What would you like to perform ?\n"
-        + "   ------------------------------------" + "\n"
-        + "   (1)-\tFind the factorial of a number\n"
-        + "   (2)-\tSummation of a number and all whole numbers less than it\n"
-        + "   (3)-\tDetermine if a number is in between 10 and 20\n"
-    // + " (4)\tFind the factorial of A NUMBER\n"
-    // + " (5)\tFind the factorial of A NUMBER\n"
-    // + " (6)\tFind the factorial of A NUMBER\n"
-    // + " (7)\tFind the factorial of A NUMBER\n"
-    // + " (8)\tFind the factorial of A NUMBER\n"
-    // + " (9)\tFind the factorial of A NUMBER\n"
-    // + " (10)\tFind the factorial of A NUMBER\n"
-    );
+    System.out.println(""
+        + "****************************************************\n"
+        + "* Welcome to Jonathan Kenny's Integration Project: *\n"
+        + "*    A portfolio of things learned in COP 2006     *\n"
+        + "****************************************************\n\n"
 
+        + "-------------------------------------" + "\n"
+        + "---------- SELECT A METHOD ----------\n"
+        + "-------------------------------------" + "\n\n"
+
+        + " (1)- [FACTORIAL]:\n"
+        + "\t*Find the factorial of a number\n\n"
+
+        + " (2)- [SUMMATION]:\n"
+        + "\t*Summation of a number and all whole numbers less than it\n\n"
+
+        + " (3)- [10 < X < 20]:\n"
+        + "\t*Determine if a number is in between 10 and 20\n\n"
+
+        + " (4)- [HOURGLASS SUMMATION]:\n"
+        + "\t*Find the largest Hourglass Shape Summation present"
+        + " within an Array\n\n"
+
+        + " (5)- [REVERSE PRINT AN ARRAY]:\n"
+        + "\t*Reverse print the array entered\n\n"
+
+        + " (6)-  ***COMING SOON***\n"
+        + " (7)-  ***COMING SOON***\n"
+        + " (8)-  ***COMING SOON***\n");
+
+    // --PROGRAM CONTINUE LOOP-- //
     char continueProgram = 'y';
-
     while (continueProgram != 'n') {
-      TableOfContents.tableOfContents(scan);
-      System.out.println("\n\n\n---------------------------------\n"
+      TableOfContents.select(scan);
+      System.out.println("\n\n\n-------------------------------------------\n"
           + "Enter 'any key' to continue or 'n' to quit."
-          + "\n---------------------------------");
+          + "\n-------------------------------------------");
       continueProgram = ExceptionHandler.getGoodCharInput(scan);
     }
 
+    // --PROGRAM QUIT MESSAGE-- //
     System.out.println(
         "\n\n\n~~~~~~~~~\n~~~~~~~~~\n" + "Good-Bye!\n~~~~~~~~~\n~~~~~~~~~");
     scan.close();

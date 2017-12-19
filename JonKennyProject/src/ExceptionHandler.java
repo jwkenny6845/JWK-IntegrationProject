@@ -1,3 +1,7 @@
+/**
+ * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
+ */
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -25,7 +29,8 @@ public class ExceptionHandler {
         intInput = scan.nextInt();
         gottenGoodInput = true;
       } catch (InputMismatchException ex) {
-        System.out.println("Requires an integer");
+        System.out.println(">>ERROR<< "
+            + "Enter an integer to continue operation:");
         scan.nextLine();
       }
     }
@@ -48,7 +53,8 @@ public class ExceptionHandler {
         doubleInput = scan.nextDouble();
         gottenGoodInput = true;
       } catch (InputMismatchException ex) {
-        System.out.println("Requires a decimal number");
+        System.out.println(">>ERROR<< "
+            + "Enter a decimal number to continue operation:");
         scan.nextLine();
       }
     }
@@ -71,7 +77,8 @@ public class ExceptionHandler {
         booleanInput = scan.nextBoolean();
         gottenGoodInput = true;
       } catch (InputMismatchException ex) {
-        System.out.println("Requires an decimal number");
+        System.out.println(">>ERROR<< "
+            + "Enter a boolean (true/false) to continue operation:");
         scan.nextLine();
       }
     }
@@ -94,10 +101,36 @@ public class ExceptionHandler {
         charInput = scan.next().charAt(0);
         gottenGoodInput = true;
       } catch (InputMismatchException ex) {
-        System.out.println("Requires a single character");
+        System.out.println(">>ERROR<< "
+            + "Enter a single character to continue operation:");
         scan.nextLine();
       }
     }
     return charInput;
+
+  }
+
+  // --STRING INPUT CHECKER METHOD-- //
+  /**
+   * Checks to see if user input is a String.
+   * 
+   * @param scan
+   *          Scanner object that receives the user input
+   * @return Returns the validated String input for use in the program
+   */
+  public static String getGoodStringInput(Scanner scan) {
+    boolean gottenGoodInput = false;
+    String stringInput = null;
+    while (gottenGoodInput == false) {
+      try {
+        stringInput = scan.nextLine();
+        gottenGoodInput = true;
+      } catch (InputMismatchException ex) {
+        System.out.println(">>ERROR<< "
+            + "Enter any String to continue operation:");
+        scan.nextLine();
+      }
+    }
+    return stringInput;
   }
 }

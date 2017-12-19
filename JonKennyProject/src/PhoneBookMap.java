@@ -1,8 +1,5 @@
-
 /**
- * JONATHAN KENNY
- * COP 2006 - FALL 2017
- * PROF. VANSELOW
+ * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
 
 import java.util.HashMap;
