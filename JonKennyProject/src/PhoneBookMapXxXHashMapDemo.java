@@ -1,3 +1,4 @@
+
 /**
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
@@ -6,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class PhoneBookMap_HashMapDemo {
+public class PhoneBookMapXxXHashMapDemo {
 
   // --PHONEBOOK MAP METHOD-- //
   /**

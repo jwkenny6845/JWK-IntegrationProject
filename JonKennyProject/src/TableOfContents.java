@@ -1,3 +1,4 @@
+
 /**
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
@@ -47,7 +48,7 @@ public class TableOfContents {
         MethodVault.makeUpperCase(scan);
         break;
       case 7:
-        Vehicle_PolymorphismDemo.doPolyDemo();
+        PolymorphismDemo.doPolyDemo();
         break;
       case 8:
         MethodVault.stackDemo(scan, rng);
