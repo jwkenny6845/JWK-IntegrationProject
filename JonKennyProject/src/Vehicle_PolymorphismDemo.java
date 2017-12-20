@@ -2,13 +2,14 @@
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
 
-public class PolymorphismDemo {
+public class Vehicle_PolymorphismDemo {
 
   // --POLYMORPHISM DEMO CLASS-- //
   /**
    * Class that demonstrates polymorphism.
    */
   public static void doPolyDemo() {
+
     // --program that demonstrates classes-- //
     Vehicle myHonda = new Vehicle();
     myHonda.setMake("Honda");

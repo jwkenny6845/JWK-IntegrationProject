@@ -2,6 +2,7 @@
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class TableOfContents {
@@ -13,7 +14,7 @@ public class TableOfContents {
    * @param scan
    *          User input selecting a switch state
    */
-  public static void select(Scanner scan) {
+  public static void select(Scanner scan, Random rng) {
 
     // --METHOD SELECTOR PROMPT-- //
     System.out.println(""
@@ -37,19 +38,22 @@ public class TableOfContents {
         System.out.println(MethodVault.inBetween10and20(scan));
         break;
       case 4:
-        System.out.println(MethodVault.hourglassSummation(scan));
+        System.out.println(MethodVault.hourglassSummation(scan, rng));
         break;
       case 5:
         MethodVault.arrayReverseOrder(scan);
         break;
       case 6:
-        System.out.println("Method 6 is coming soon!");
+        MethodVault.makeUpperCase(scan);
         break;
       case 7:
-        System.out.println("Method 7 is coming soon!");
+        Vehicle_PolymorphismDemo.doPolyDemo();
         break;
       case 8:
-        System.out.println("Method 8 is coming soon!");
+        MethodVault.stackDemo(scan, rng);
+        break;
+      case 9:
+        MethodVault.queueDemo(scan, rng);
         break;
       default:
         System.out.println("METHOD (" + method + ") DOES NOT EXIST!");

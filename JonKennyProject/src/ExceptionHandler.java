@@ -1,3 +1,4 @@
+
 /**
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
@@ -110,27 +111,4 @@ public class ExceptionHandler {
 
   }
 
-  // --STRING INPUT CHECKER METHOD-- //
-  /**
-   * Checks to see if user input is a String.
-   * 
-   * @param scan
-   *          Scanner object that receives the user input
-   * @return Returns the validated String input for use in the program
-   */
-  public static String getGoodStringInput(Scanner scan) {
-    boolean gottenGoodInput = false;
-    String stringInput = null;
-    while (gottenGoodInput == false) {
-      try {
-        stringInput = scan.nextLine();
-        gottenGoodInput = true;
-      } catch (InputMismatchException ex) {
-        System.out.println(">>ERROR<< "
-            + "Enter any String to continue operation:");
-        scan.nextLine();
-      }
-    }
-    return stringInput;
-  }
 }

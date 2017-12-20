@@ -2,7 +2,7 @@
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
 
-public class Person {
+public class Person_BasicClassDemo {
 
   // --USE OF VARIABLES-- //
   // --[4 FIELDS in the Person class]-- //
@@ -62,7 +62,7 @@ public class Person {
    * @param startWeight
    *          Initial weight
    */
-  public Person(String startName, int startAge, int startHeight,
+  public Person_BasicClassDemo(String startName, int startAge, int startHeight,
       int startWeight) {
 
     name = startName;
@@ -71,7 +71,7 @@ public class Person {
     weight = startWeight;
 
     // ARGUMENT AND PARAMETER:
-    Person person1 = new Person(startName, startAge, startHeight, startWeight);
+    Person_BasicClassDemo person1 = new Person_BasicClassDemo(startName, startAge, startHeight, startWeight);
 
     person1.setAge(30);
     System.out.println(person1.getAge());

@@ -1,12 +1,19 @@
+
 /**
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
 
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Random;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class MethodVault {
 
+  /////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
   // --FACTORIAL METHOD-- //
   /**
    * Factorial method.
@@ -25,6 +32,8 @@ public class MethodVault {
     }
   }
 
+  /////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
   // --SUMMATION METHOD-- //
   /**
    * Sums user input with ever whole number less than it.
@@ -45,6 +54,8 @@ public class MethodVault {
         + summationInput + ") = " + sum);
   }
 
+  /////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
   // --IN BETWEEN 10 AND 20 METHOD-- //
   /**
    * Determines if the user input is in between 10 and 20.
@@ -65,13 +76,15 @@ public class MethodVault {
     }
   }
 
+  /////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
   // --HOURGLASS SUMMATION METHOD-- //
   /**
    * Hourglass Summation of an Array.
    * 
    * @return maxSum
    */
-  public static String hourglassSummation(Scanner scan) {
+  public static String hourglassSummation(Scanner scan, Random rng) {
 
     System.out.println("Enter Number of Rows in Array "
         + "(Must be 3 or greater):");
@@ -95,16 +108,31 @@ public class MethodVault {
           + "Using DEFAULT value of 3 <<<\n");
     }
 
-    System.out.println("Enter each integer for the Array:\n"
+    scan.nextLine();
+
+    boolean wantRng;
+    System.out.println(
+        "Do you want to use Randomly Generated Numbers for the array elements?\n"
+            + "('Y' for YES) or ('any key' for NO):");
+    String randomChoice = scan.nextLine();
+
+    wantRng = randomChoice.equals("y") ? true : false;
+
+    System.out.println("\nEnter each integer for the Array:\n"
         + "  * " + (hgSumRows * hgSumCols) + " numbers are needed *\n"
         + "  * Press 'return' after each entry *\n"
-        + "  * Array fills left-to-right and then top-to-bottom *");
+        + "  * Array fills left-to-right and then top-to-bottom *\n\n");
 
     int[][] arr = new int[hgSumRows][hgSumCols];
     for (int i = 0; i < hgSumRows; i++) {
       for (int j = 0; j < hgSumCols; j++) {
-        arr[i][j] = ExceptionHandler.getGoodIntInput(scan);
+        if (wantRng == false) {
+          arr[i][j] = ExceptionHandler.getGoodIntInput(scan);
+        } else {
+          arr[i][j] = rng.nextInt(100);
+        }
       }
+
     }
 
     System.out.println("This is the Array you entered:\n"
@@ -139,6 +167,9 @@ public class MethodVault {
     }
   }
 
+  /////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
+  // --ARRAY EXAMPLE
   /**
    * Array example.
    */
@@ -173,15 +204,163 @@ public class MethodVault {
    * @param scan
    *          scans in users string
    */
-  public static void doesItContain(Scanner scan) {
+  public static void makeUpperCase(Scanner scan) {
+
+    scan.nextLine();
 
     System.out.println("Enter a String to be changed into all UPPERCASE:");
-    String userString = ExceptionHandler.getGoodStringInput(scan);
+    String userString = scan.nextLine();
     String changedUpperString = userString.toUpperCase();
 
     // Display the two strings for comparison.
     System.out.println("Original String: " + userString);
     System.out.println("String in uppercase: " + changedUpperString);
+  }
+
+  /////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
+  // --STACK DEMO METHOD-- //
+  /**
+   * Stack Demo Method.
+   * 
+   * @param scan
+   *          scans in user input
+   * @param rng
+   *          uses Random Number Generation for method input
+   */
+  public static void stackDemo(Scanner scan, Random rng) {
+
+    Stack<Integer> stack = new Stack<>();
+
+    System.out.println("Enter size of Stack: \n(Must be 1 or greater):");
+    int stackSize = ExceptionHandler.getGoodIntInput(scan);
+    if (stackSize > 0) {
+      System.out.println("\n>>> Stack will be "
+          + stackSize + " elements long <<<\n");
+    } else {
+      stackSize = 5;
+      System.out.println("\n>>> STACK VALUE OUT OF RANGE: "
+          + "Using DEFAULT value of 5 <<<\n");
+    }
+
+    scan.nextLine();
+
+    boolean wantRng;
+    System.out.println(
+        "Do you want to use Randomly Generated Numbers for the Stack elements?"
+            + "\n('Y' for YES) or ('any key' for NO):");
+    String randomChoice = scan.nextLine();
+    wantRng = randomChoice.equals("y") ? true : false;
+
+    System.out.println("\nEnter each integer for the Stack:\n"
+        + "  * " + stackSize + " numbers are needed *\n"
+        + "  * Press 'return' after each entry *\n"
+        + "  * Stack fills left-to-right *\n\n");
+
+    for (int i = 0; i < stackSize; i++) {
+      if (wantRng == false) {
+        stack.push(ExceptionHandler.getGoodIntInput(scan));
+      } else {
+        stack.push(rng.nextInt(100));
+      }
+    }
+
+    // --PRINT DEMO STACK-- //
+    System.out.println("Demo Stack: " + stack);
+
+    System.out
+        .println("Enter ammount of elements to Remove(Pop) from the of Stack: "
+            + "\n(Must be not be greater than " + stackSize + "):");
+    int popAmmount = ExceptionHandler.getGoodIntInput(scan);
+    if (popAmmount >= 0 && popAmmount <= stackSize) {
+      System.out.println("\n>>> Removing(Popping) "
+          + popAmmount + " elements from the stack <<<\n");
+    } else {
+      popAmmount = 1;
+      System.out.println("\n>>> REMOVE(POP) VALUE OUT OF RANGE: "
+          + "Using DEFAULT value of 1 <<<\n");
+    }
+
+    for (int i = 0; i < popAmmount; i++) {
+      stack.pop();
+    }
+
+    // --PRINT DEMO STACK AFTER POPPING-- //
+    System.out.println("Demo Stack: " + stack);
+
+  }
+  
+  /////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
+  // --QUEUE DEMO METHOD-- //
+  /**
+   * QUEUE Demo Method.
+   * 
+   * @param scan
+   *          scans in user input
+   * @param rng
+   *          uses Random Number Generation for method input
+   */
+  public static void queueDemo(Scanner scan, Random rng) {
+
+    Queue<Integer> queue = new LinkedList<>();
+
+    System.out.println("Enter size of Queue: \n(Must be 1 or greater):");
+    int queueSize = ExceptionHandler.getGoodIntInput(scan);
+    if (queueSize > 0) {
+      System.out.println("\n>>> Queue will be "
+          + queueSize + " elements long <<<\n");
+    } else {
+      queueSize = 5;
+      System.out.println("\n>>> QUEUE VALUE OUT OF RANGE: "
+          + "Using DEFAULT value of 5 <<<\n");
+    }
+
+    scan.nextLine();
+
+    boolean wantRng;
+    System.out.println(
+        "Do you want to use Randomly Generated Numbers for the Queue elements?"
+            + "\n('Y' for YES) or ('any key' for NO):");
+    String randomChoice = scan.nextLine();
+    wantRng = randomChoice.equals("y") ? true : false;
+
+    System.out.println("\nEnter each integer for the Queue:\n"
+        + "  * " + queueSize + " numbers are needed *\n"
+        + "  * Press 'return' after each entry *\n"
+        + "  * Queue fills left-to-right *\n\n");
+
+    for (int i = 0; i < queueSize; i++) {
+      if (wantRng == false) {
+        queue.add(ExceptionHandler.getGoodIntInput(scan));
+      } else {
+        queue.add(rng.nextInt(100));
+      }
+    }
+
+    // --PRINT DEMO QUEUE-- //
+    System.out.println("Demo Queue: " + queue);
+
+    System.out
+        .println("Enter ammount of elements to Remove from the of Queue: "
+            + "\n(Must be not be greater than " + queueSize + "):");
+    int popAmmount = ExceptionHandler.getGoodIntInput(scan);
+    if (popAmmount >= 0 && popAmmount <= queueSize) {
+      System.out.println("\n>>> Removing "
+          + popAmmount + " elements from the Queue <<<\n");
+    } else {
+      popAmmount = 1;
+      System.out.println("\n>>> REMOVE VALUE OUT OF RANGE: "
+          + "Using DEFAULT value of 1 <<<\n");
+    }
+
+    for (int i = 0; i < popAmmount; i++) {
+      queue.remove();
+    }
+
+    // --PRINT DEMO STACK AFTER POPPING-- //
+    System.out.println("Demo Queue: " + queue);
+
   }
 
 }

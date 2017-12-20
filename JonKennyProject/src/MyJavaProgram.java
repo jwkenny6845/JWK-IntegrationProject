@@ -2,11 +2,13 @@
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class MyJavaProgram {
 
   static Scanner scan;
+  static Random rng;
 
   // --PROGRAM MAIN METHOD-- //
   /**
@@ -17,6 +19,7 @@ public class MyJavaProgram {
    */
   public static void main(String[] args) {
     scan = new Scanner(System.in);
+    rng = new Random();
     System.out.println(""
         + "****************************************************\n"
         + "* Welcome to Jonathan Kenny's Integration Project: *\n"
@@ -38,19 +41,29 @@ public class MyJavaProgram {
 
         + " (4)- [HOURGLASS SUMMATION]:\n"
         + "\t*Find the largest Hourglass Shape Summation present"
-        + " within an Array\n\n"
+        + " within an array\n\n"
 
         + " (5)- [REVERSE PRINT AN ARRAY]:\n"
         + "\t*Reverse print the array entered\n\n"
 
-        + " (6)-  ***COMING SOON***\n"
-        + " (7)-  ***COMING SOON***\n"
-        + " (8)-  ***COMING SOON***\n");
+        + " (6)- [CHANGE STRING TO UPPERCASE]:\n"
+        + "\t*Enter a String and then have it returned in all UPPERCASE\n\n"
+
+        + " (7)- [POLYMORPHISM DEMO]:\n"
+        + "\t*(See full code for example of concept)\n\n"
+
+        + " (8)- [STACK DEMO]:\n"
+        + "\t*Create a stack and then pop(remove) elements from it\n\n"
+
+        + " (9)- [QUEUE DEMO]:\n"
+        + "\t*Create a queue and then remove elements from it\n\n"
+
+        + " (10)-  ***COMING SOON***\n");
 
     // --PROGRAM CONTINUE LOOP-- //
     char continueProgram = 'y';
     while (continueProgram != 'n') {
-      TableOfContents.select(scan);
+      TableOfContents.select(scan, rng);
       System.out.println("\n\n\n-------------------------------------------\n"
           + "Enter 'any key' to continue or 'n' to quit."
           + "\n-------------------------------------------");
