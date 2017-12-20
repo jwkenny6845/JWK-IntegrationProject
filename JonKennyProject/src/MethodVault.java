@@ -289,7 +289,7 @@ public class MethodVault {
     System.out.println("Demo Stack: " + stack);
 
   }
-  
+
   /////////////////////////////////////////////////////////////////////////////
   /////////////////////////////////////////////////////////////////////////////
   // --QUEUE DEMO METHOD-- //
@@ -360,6 +360,94 @@ public class MethodVault {
 
     // --PRINT DEMO STACK AFTER POPPING-- //
     System.out.println("Demo Queue: " + queue);
+
+  }
+
+  /////////////////////////////////////////////////////////////////////////////
+  /////////////////////////////////////////////////////////////////////////////
+  // --SEARCH A 2D ARRAY DEMO METHOD-- //
+  /**
+   * Creates and searches a 2D array for a user entered integer.
+   * 
+   * @param scan
+   *          scans in user input
+   * @param rng
+   *          uses Random Number Generation for method input
+   */
+  public static void search2DArray(Scanner scan, Random rng) {
+
+    System.out.println("Enter Number of Rows in Array "
+        + "(Must be 3 or greater):");
+    int arrRows = ExceptionHandler.getGoodIntInput(scan);
+    if (arrRows >= 3) {
+      System.out.println("\n>>> " + arrRows + " Rows selected <<<\n");
+    } else {
+      arrRows = 3;
+      System.out.println("\n>>> ROWS VALUE OUT OF RANGE: "
+          + "Using DEFAULT value of 3 <<<\n");
+    }
+
+    System.out.println("Enter Number of Columns in Array "
+        + "(Must be 3 or greater):");
+    int arrCols = ExceptionHandler.getGoodIntInput(scan);
+    if (arrCols >= 3) {
+      System.out.println("\n>>> " + arrCols + " Columns selected <<<\n");
+    } else {
+      arrCols = 3;
+      System.out.println("\n>>> COLUMNS VALUE OUT OF RANGE: "
+          + "Using DEFAULT value of 3 <<<\n");
+    }
+
+    scan.nextLine();
+
+    boolean wantRng;
+    System.out.println(
+        "Do you want to use Randomly Generated Numbers for the array elements?\n"
+            + "('Y' for YES) or ('any key' for NO):");
+    String randomChoice = scan.nextLine();
+
+    wantRng = randomChoice.equals("y") ? true : false;
+
+    System.out.println("\nEnter each integer for the Array:\n"
+        + "  * " + (arrRows * arrCols) + " numbers are needed *\n"
+        + "  * Press 'return' after each entry *\n"
+        + "  * Array fills left-to-right and then top-to-bottom *\n\n");
+
+    int[][] arr = new int[arrRows][arrCols];
+    for (int i = 0; i < arrRows; i++) {
+      for (int j = 0; j < arrCols; j++) {
+        if (wantRng == false) {
+          arr[i][j] = ExceptionHandler.getGoodIntInput(scan);
+        } else {
+          arr[i][j] = rng.nextInt(100);
+        }
+      }
+    }
+
+    System.out.println("This is the Array you entered:\n"
+        + Arrays.deepToString(arr).replace("], ", "]\n"));
+
+    System.out.println(
+        "Enter a number to search the 2D Array for any instance of it:");
+    int searchNumber = ExceptionHandler.getGoodIntInput(scan);
+
+    scan.nextLine();
+
+    boolean foundNumber = false;
+    for (int i = 0; i < arrRows; ++i) {
+      for (int j = 0; j < arrCols; ++j) {
+        if (arr[i][j] == searchNumber) {
+          foundNumber = true;
+          System.out.println(
+              "Number has been found at position (" + i + "," + j + ")");
+        } else if (foundNumber == false && i == (arrRows - 1)
+            && j == (arrCols - 1)) {
+          System.out.println("Number was not found");
+        }
+
+      }
+
+    }
 
   }
 

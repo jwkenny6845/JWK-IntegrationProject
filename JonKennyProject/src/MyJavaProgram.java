@@ -1,3 +1,4 @@
+
 /**
  * JONATHAN KENNY COP 2006 - FALL 2017 PROF. VANSELOW
  */
@@ -58,7 +59,8 @@ public class MyJavaProgram {
         + " (9)- [QUEUE DEMO]:\n"
         + "\t*Create a queue and then remove elements from it\n\n"
 
-        + " (10)-  ***COMING SOON***\n");
+        + " (10)- [SEARCH 2D ARRAY]:\n"
+        + "\t*Create a queue and then remove elements from it\n\n");
 
     // --PROGRAM CONTINUE LOOP-- //
     char continueProgram = 'y';

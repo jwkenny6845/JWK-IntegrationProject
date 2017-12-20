@@ -55,6 +55,9 @@ public class TableOfContents {
       case 9:
         MethodVault.queueDemo(scan, rng);
         break;
+      case 10:
+        MethodVault.search2DArray(scan, rng);
+        break;
       default:
         System.out.println("METHOD (" + method + ") DOES NOT EXIST!");
         break;
