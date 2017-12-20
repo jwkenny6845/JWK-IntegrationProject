@@ -48,15 +48,12 @@ public class TableOfContents {
         MethodVault.makeUpperCase(scan);
         break;
       case 7:
-        PolymorphismDemo.doPolyDemo();
-        break;
-      case 8:
         MethodVault.stackDemo(scan, rng);
         break;
-      case 9:
+      case 8:
         MethodVault.queueDemo(scan, rng);
         break;
-      case 10:
+      case 9:
         MethodVault.search2DArray(scan, rng);
         break;
       default:

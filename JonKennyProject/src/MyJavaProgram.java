@@ -6,6 +6,9 @@
 import java.util.Random;
 import java.util.Scanner;
 
+/**
+ * @author jonkenny The class containing the main method for my program.
+ */
 public class MyJavaProgram {
 
   static Scanner scan;
@@ -14,6 +17,13 @@ public class MyJavaProgram {
   // --PROGRAM MAIN METHOD-- //
   /**
    * Jonathan Kenny's - Integration Project - COP 2006 - Prof. Vanselow.
+   * 
+   * <p>This student project program is a compilation showcase of concepts and
+   * coding learned in "Introduction to Programming. It is a hodge-podge of
+   * methods and classes that can be called upon from an interactive Table of
+   * Contents. Also, all user input that could cause exceptions are ran through
+   * special methods in the Exception Handler class to prevent program operation
+   * issues.
    * 
    * @param args
    *          - Needed for main method
@@ -50,16 +60,13 @@ public class MyJavaProgram {
         + " (6)- [CHANGE STRING TO UPPERCASE]:\n"
         + "\t*Enter a String and then have it returned in all UPPERCASE\n\n"
 
-        + " (7)- [POLYMORPHISM DEMO]:\n"
-        + "\t*(See full code for example of concept)\n\n"
-
-        + " (8)- [STACK DEMO]:\n"
+        + " (7)- [STACK DEMO]:\n"
         + "\t*Create a stack and then pop(remove) elements from it\n\n"
 
-        + " (9)- [QUEUE DEMO]:\n"
+        + " (8)- [QUEUE DEMO]:\n"
         + "\t*Create a queue and then remove elements from it\n\n"
 
-        + " (10)- [SEARCH 2D ARRAY]:\n"
+        + " (9)- [SEARCH 2D ARRAY]:\n"
         + "\t*Create a queue and then remove elements from it\n\n");
 
     // --PROGRAM CONTINUE LOOP-- //
